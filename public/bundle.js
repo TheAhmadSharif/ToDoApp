@@ -42,14 +42,21 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var abul = __webpack_require__(1);
+	abul();
+
+
+/***/ },
+/* 1 */
 /***/ function(module, exports) {
 
 	function greeter () {
-	    document.write('Form greeter function');    
-	    
+	    document.write('<h2>From Greeter function. And Start From webpack</h2>');    
 	}
 
-	greeter();
+	module.exports = greeter;
 
 
 /***/ }

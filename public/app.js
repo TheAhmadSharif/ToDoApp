@@ -1,6 +1,2 @@
-function greeter () {
-    document.write('Form greeter function');    
-    
-}
-
-greeter();
+var abul = require('./components/Greeter');
+abul();
