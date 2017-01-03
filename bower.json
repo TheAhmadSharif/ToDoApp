@@ -1,0 +1,21 @@
+{
+  "name": "todo",
+  "description": "toDo App",
+  "main": "index.js",
+  "authors": [
+    "Ahmad Sharif"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/TheAhmadSharif/ToDoApp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.4.1"
+  }
+}
