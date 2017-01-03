@@ -1,10 +1,21 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Greeter = require('./components/Greeter');
+var Greeter = React.createClass({
+	getDefaultProps: function () {
+		return {
+			name: 'Abul'
+		}
+	},
+	render: function () {
+	var name = this.props.name;
+		return (
+			<div> 
+				<h2> Hello {name} </h2>
+			</div>
+		)
+	}
+})
 
-var firstName = 'Andrew';
 
 ReactDOM.render(
-  <Greeter name={firstName}/>,
-  document.getElementById('app')
+ 	<Greeter/>,
+	document.getElementById('app')
 );
