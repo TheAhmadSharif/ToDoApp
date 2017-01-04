@@ -1,27 +1,25 @@
 var GreeterForm = React.createClass({
-	clickAction: function (e) {
+	onClick: function (e) {
 		e.preventDefault();
 		var name = this.refs.name.value;
 		this.props.newName(name);
-		console.log('Hi', name);
+		console.log(name);
 	},
 	render: function () {
 		return (
-			<form onSubmit={this.clickAction}>
-				<input type="text" ref="name" />
+			<form onSubmit={this.onClick}>
+				<input type="text" ref="name"/>
 				<button> Set Name </button>
 			</form>
-		);
+		)
 	}
-});
-
+})
 
 var Greeter = React.createClass({
 	getDefaultProps: function () {
 		return {
 			name: 'Ahmad'
 		}
-		
 	},
 	getInitialState: function () {
 		return {
@@ -30,22 +28,22 @@ var Greeter = React.createClass({
 		
 	},
 	handleNewName: function (name) {
-		this.setState({
-				name: name
-			});
+			this.setState({
+				name: name			
+			});		
 	},
 	render: function () {
 		var name = this.state.name;
 		return (
-			<div>
-				<h2> Hello {name} </h2>
+			<div> 
+				<h2> Hello {name}</h2>
 				<GreeterForm newName={this.handleNewName}/>
 			</div>
 		)
 	}
-});
-
+	
+})
 ReactDOM.render(
-	<Greeter />,
+	<Greeter/>,
 	document.getElementById('app')
-);
+)
