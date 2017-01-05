@@ -7,18 +7,26 @@ var Route = require('react-route').Route;
 
 */
 
-
-var Route = require('react-route').Route;
-var Router = require('react-route').Router;
-var IndexRoute = require('react-route').IndexRoute;
-
+var React = require('react');
+var ReactDOM = require('react-dom');
+var ReactRouter = require('react-router');
+var Route = require('react-router').Route;
+var Router = require('react-router').Router;
+var IndexRoute = require('react-router').IndexRoute;
+var hashHistory = require('react-router').hashHistory;
+var Main  = require('Main');
+var Weather = require('Weather');
+var About = require('About');
 
 ReactDOM.render(
-  <h1> Hello World !! </h1>,
+  <Router history={hashHistory}>
+		<Route path="/" component={Main}>
+			<IndexRoute component={Weather}/>
+		 	<Route path="about" component={About}/>
+		</Route>
+	</Router>,
   document.getElementById('app')
 );
 
-<Router history=>
-	
-</Router>
+
 
