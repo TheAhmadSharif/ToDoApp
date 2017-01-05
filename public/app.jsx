@@ -11,6 +11,7 @@ var GreeterForm = React.createClass({
 		e.preventDefault();
 		var name = this.refs.name.value;
 		var a = this.props.newName(name);
+		console.log('Hi');
 	}
 });
 var Greeter = React.createClass({
@@ -38,9 +39,7 @@ var Greeter = React.createClass({
 			</div>		
 		)
 	}		
-})
-
-
+});
 ReactDOM.render(
 	<Greeter/>,
 	document.getElementById('app')

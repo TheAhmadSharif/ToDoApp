@@ -50,10 +50,10 @@
 	var ReactDOM = __webpack_require__(32);
 
 	ReactDOM.render(React.createElement(
-	  'h1',
-	  null,
-	  ' Hello World !! '
-	), document.getElementById('app'));
+		'h2',
+		null,
+		' Hello World '
+	), document.getElementByID('app'));
 
 /***/ },
 /* 1 */
